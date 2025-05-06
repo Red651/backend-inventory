@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "funcdtions": {
+      "ist/index.js": {
+        "runtime": "now-php@1.0.0"
+      }
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "dist/index.js"
+      }
+    ]
+  }
+  
