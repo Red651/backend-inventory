@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "build": "tsc",
+    "build": "tsc && npm run copy-prisma",
+    "copy-prisma": "copyfiles -u 1 src/generated/**/* dist/generated",
     "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bcryptjs": "^2.4.6",
@@ -27,6 +28,7 @@
     "@types/passport-local": "^1.0.38",
     "@types/testing-library__jest-dom": "^5.14.9",
     "bcrypt": "^5.1.1",
+    "copyfiles": "^2.4.1",
     "cpx": "^1.5.0",
     "dotenv": "^16.5.0",
     "eslint": "^9.25.0",
